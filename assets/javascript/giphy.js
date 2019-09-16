@@ -38,6 +38,18 @@ function showButtons() {
     }
 }
 
+$("#add-topic").on("click", function(event) {
+    event.preventDefault();
+    // input from text
+    let searchedTopic = $("#searched-topics").val().trim();
+    // push into array
+    topics.push(searchedTopic);
+    // calls function to create buttons for input
+    showButtons();
+});
+
+// $(document).on("click", ".topics-btn", displayTopics);
+
 showButtons();
 
 
